@@ -1,3 +1,8 @@
+{{
+    config(
+        materialized='view'
+    )
+}}
 with orders as(
     select * from {{ref("stg_orders")}}
 ),
